@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Font family -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+
+		<link rel="icon" href="./assets/images/favicon.png" />
+		<!-- Font Awesome -->
+		<link
+		rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+		integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+		crossorigin="anonymous"
+		/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Drumkit</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<h1>Drumkit</h1>
+		</header>
+		<main class="main">
+			<!-- Keys -->
+			<div class="container">
+				<div class="container_top">
+					<div class="main__key openhat" data-key="69">
+						<h3 class="main__key-title">E</h3>
+						<p class="main__key-small">Openhat</p>
+					</div>
+					<div class="main__key hihat" data-key="82">
+						<h3 class="main__key-title">R</h3>
+						<p class="main__key-small">Hihat</p>
+					</div>
+					<div class="main__key ride" data-key="85">
+						<h3 class="main__key-title">U</h3>
+						<p class="main__key-small">Ride</p>
+					</div>
+					<div class="main__key tink" data-key="73">
+						<h3 class="main__key-title">I</h3>
+						<p class="main__key-small">Tink</p>
+					</div>
+				</div>
+				<div class="container_middle">
+					<div class="main__key boom" data-key="68">
+						<h3 class="main__key-title">D</h3>
+						<p class="main__key-small">Boom</p>
+					</div>
+					<div class="main__key snare" data-key="70">
+						<h3 class="main__key-title">F</h3>
+						<p class="main__key-small">Snare</p>
+					</div>
+					<div class="main__key tom" data-key="74">
+						<h3 class="main__key-title">J</h3>
+						<p class="main__key-small">Tom</p>
+					</div>
+					<div class="main__key clap" data-key="75">
+						<h3 class="main__key-title">K</h3>
+						<p class="main__key-small">Clap</p>
+					</div>
+				</div>
+				<div class="container_bottom">
+					<div class="main__key kick" data-key="32">
+						<h3 class="main__key-title">Space</h3>
+						<p class="main__key-small">Kick</p>
+					</div>
+				</div>
+			</div>
+			<!-- Audio -->
+			<div class="audio">
+				<audio data-key="68" src="./audio/boom.wav"></audio>
+				<audio data-key="75" src="./audio/clap.wav"></audio>
+				<audio data-key="82" src="./audio/hihat.wav"></audio>
+				<audio data-key="32" src="./audio/kick.wav"></audio>
+				<audio data-key="69" src="./audio/openhat.wav"></audio>
+				<audio data-key="85" src="./audio/ride.wav"></audio>
+				<audio data-key="70" src="./audio/snare.wav"></audio>
+				<audio data-key="74" src="./audio/tom.wav"></audio>
+				<audio data-key="73" src="./audio/tink.wav"></audio>
+			</div>
+		</main>
+		<footer class="footer">      
+			<a href="https://github.com/iunyi" target="_blank">
+				<i class="fab fa-github"></i>
+				iunyi
+			</a>
+		</footer> 
+		<script src="./js/main.js"></script>
+	</body>
+</html>

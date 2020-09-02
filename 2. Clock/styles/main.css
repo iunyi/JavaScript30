@@ -1,0 +1,178 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-image: url("../images/jake.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: #fbb440;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+body .main .jake {
+  width: 45vh;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 600px) {
+  body .main .jake {
+    width: 50vh;
+    height: 10vh;
+  }
+}
+
+body .main .jake .eye {
+  width: 12vh;
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000000;
+  border-radius: 50%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+body .main .jake .eye_iris {
+  width: 10vh;
+  height: 10vh;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+body .main .clock {
+  width: 50vh;
+  height: 50vh;
+  padding: 45px;
+  position: absolute;
+  top: 28%;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 25px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 25px -10px rgba(0, 0, 0, 0.3);
+}
+
+body .main .clock_face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body .main .clock_face .hand {
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body .main .clock_face .hour {
+  width: 50%;
+  height: 10px;
+  background-color: #9b773b;
+}
+
+body .main .clock_face .minute {
+  width: 50%;
+  height: 5px;
+  background-color: #9b773b;
+}
+
+body .main .clock_face .second {
+  width: 50%;
+  height: 3px;
+  background-color: #d3a35092;
+}
+
+body .main .snail {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 6vh;
+  right: 30px;
+  -webkit-animation: slide 100s infinite forwards;
+          animation: slide 100s infinite forwards;
+}
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-90vw);
+            transform: translateX(-90vw);
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-90vw);
+            transform: translateX(-90vw);
+  }
+}
+
+body .footer {
+  width: 100vw;
+  height: 10vh;
+}
+
+body .footer .wrapper {
+  margin: 0 50px;
+  padding: 2vh;
+  border-top: 1px solid #9b773b;
+}
+
+body .footer .wrapper .contact_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .footer .wrapper .contact_list i {
+  color: #9b773b;
+}
+/*# sourceMappingURL=main.css.map */

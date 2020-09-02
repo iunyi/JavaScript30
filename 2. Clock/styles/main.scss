@@ -1,0 +1,150 @@
+// VARIABLES
+
+// Breakpoints
+$tablet: 600px;
+
+// Colors
+$color_primary: #fbb440;
+$color_secondary: #9b773b;
+$color_tertiary: #d3a35092;
+$color_dark: #000000;
+$color_light: #ffffff;
+
+// MIXINS
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Devices
+@mixin tablet {
+  @media all and (min-width: $tablet) {
+    @content;
+  }
+}
+
+// -------------------------------------------
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-image: url('../images/jake.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: $color_primary;
+
+  .main {
+    @include flex_center;
+    @include size(100%, 90vh);
+
+    // Background
+    .jake {
+      @include size(45vh, 10vh);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      @include tablet {
+        @include size(50vh, 10vh);
+      }
+
+      .eye {
+        @include size(12vh, 12vh);
+        display: flex;
+        justify-content: center;
+        background-color: $color_dark;
+        border-radius: 50%;
+        transition: all 1s ease-in-out;
+
+        &_iris {
+          @include size(10vh, 10vh);
+          background-color: $color_light;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    // Clock
+    .clock {
+      @include size(50vh, 50vh);
+      padding: 45px;
+      position: absolute;
+      top: 28%;
+      border-radius: 50%;
+      box-shadow: 3px 3px 25px -10px transparentize($color_dark, 0.7);
+
+      &_face {
+        @include size(100%, 100%);
+        position: relative;
+
+        .hand {
+          position: absolute;
+          top: 50%;
+          border-radius: 5px;
+          transform-origin: 100%;
+          transform: rotate(90deg);
+        }
+        .hour {
+          @include size(50%, 10px);
+          background-color: $color_secondary;
+        }
+        .minute {
+          @include size(50%, 5px);
+          background-color: $color_secondary;
+        }
+        .second {
+          @include size(50%, 3px);
+          background-color: $color_tertiary;
+        }
+      }
+    }
+
+    .snail {
+      @include size(50px, 50px);
+      position: absolute;
+      bottom: 6vh;
+      right: 30px;
+      animation: slide 100s infinite forwards;
+    }
+
+    @keyframes slide {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-90vw);
+      }
+    }
+  }
+
+  .footer {
+    @include size(100vw, 10vh);
+
+    .wrapper {
+      margin: 0 50px;
+      padding: 2vh;
+      border-top: 1px solid $color_secondary;
+
+      .contact_list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        i {
+          color: $color_secondary;
+        }
+      }
+    }
+  }
+}

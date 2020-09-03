@@ -1,163 +1,167 @@
 // VARIABLES
 $color_dark: #292929;
 $color_neutral: #919191;
-$color_neutral_light: #e6e6e6;;
+$color_neutral_light: #e6e6e6;
 $color_light: #ffffff;
 
 // MIXINS
 // Flex
 @mixin flex_center {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex_lower {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 
 // Drum size
 @mixin small {
-    width: 65px;
-    height: 65px;
-    margin: 0;
+  width: 65px;
+  height: 65px;
+  margin: 0;
 }
 
 @mixin medium {
-    width: 80px;
-    height: 80px;
-    margin: 0;
+  width: 80px;
+  height: 80px;
+  margin: 0;
 }
 
 @mixin large {
-    width: 100px;
-    height: 100px;
-    margin: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0;
 }
 
 // ---------------------------------
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0; 
-    text-decoration: none;
-    color: inherit;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
 }
-  
-.header {
-    @include flex_center;
-    height: 15vh;
-    background-color: $color_neutral_light;
 
-    h1 {
-        color: transparentize($color_dark, 0.2);
-        font-size: 42px;
-        font-weight: 300;
-    }
+.header {
+  @include flex_center;
+  height: 15vh;
+  background-color: $color_neutral_light;
+
+  h1 {
+    color: transparentize($color_dark, 0.2);
+    font-size: 42px;
+    font-weight: 300;
+  }
 }
 
 .main {
+  @include flex_center;
+  height: 70vh;
+  background-color: $color_neutral_light;
+
+  .container {
     @include flex_center;
-    height: 70vh;
-    background-color: $color_neutral_light;
+    flex-direction: column;
+    align-items: stretch;
+    width: 510px;
+    padding: 30px 30px 0;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: $color_light;
 
-    .container {
-        @include flex_center;
-        flex-direction: column;
-        align-items: stretch; 
-        width: 510px;
-        padding: 30px 30px 0;
-        box-shadow: 4px 4px 8px 1px rgba(0,0,0,0.5);
-        border-radius: 10px;
-        background-color: $color_light;
+    .main__key {
+      @include flex_center;
+      flex-direction: column;
+      border-radius: 50%;
+      transition: all 0.1s;
+      background-color: $color_dark;
 
-        .main__key {
-            @include flex_center;
-            flex-direction: column;
-            border-radius: 50%;
-            transition: all 0.1s; 
-            background-color: $color_dark;
-
-            &-title {
-                color: white;
-                font-size: 18px;
-                font-weight: 300;
-            }
-            &-small {
-                color: $color_neutral;
-                font-size: 12px;
-                font-weight: 300;
-            }
-        }
-
-        .playing {
-            box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.5);
-            transform: scale(1.1);
-        }
-
-        &_top {
-            @include flex_lower;
-            width: 450px;
-            height: 150px;
-
-            .openhat, .tink {
-                @include medium;
-                align-self: flex-end;
-            }
-            .hihat, .ride {
-                @include large;
-            }
-        }
-
-        &_middle{
-            @include flex_lower;
-            width: 320px;
-            height: 120px;
-            transform: translateY(-30px);
-
-            .boom, .clap {
-                @include small;
-                align-self: flex-end;
-            }
-            .snare, .tom {
-                @include medium
-            }
-        }
-
-        &_bottom {
-            @include flex_center;
-            transform: translateY(-30px);
-
-            .kick{
-                width: 150px;
-                height: 50px;
-                border-radius: 20px;
-            }
-        }
+      &-title {
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+      }
+      &-small {
+        color: $color_neutral;
+        font-size: 12px;
+        font-weight: 300;
+      }
     }
+
+    .playing {
+      box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+    }
+
+    &_top {
+      @include flex_lower;
+      width: 450px;
+      height: 150px;
+
+      .openhat,
+      .tink {
+        @include medium;
+        align-self: flex-end;
+      }
+      .hihat,
+      .ride {
+        @include large;
+      }
+    }
+
+    &_middle {
+      @include flex_lower;
+      width: 320px;
+      height: 120px;
+      transform: translateY(-30px);
+
+      .boom,
+      .clap {
+        @include small;
+        align-self: flex-end;
+      }
+      .snare,
+      .tom {
+        @include medium;
+      }
+    }
+
+    &_bottom {
+      @include flex_center;
+      transform: translateY(-30px);
+
+      .kick {
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
+      }
+    }
+  }
 }
-  
+
 .footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 15vh;
-    padding: 30px;
-    background-color: $color_neutral_light;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 15vh;
+  padding: 30px;
+  background-color: $color_neutral_light;
 
-    a {
-        padding: 20px;
-        color: transparentize($color_dark, 0.2);
-        font-size:14px;
+  .link {
+    padding: 20px;
+    color: transparentize($color_dark, 0.2);
+    font-size: 14px;
 
-        &:hover {
-            color: $color_dark;
-            transition: 0.2s linear;
-        }
+    &:hover {
+      color: $color_dark;
+      transition: 0.2s linear;
     }
+  }
 }

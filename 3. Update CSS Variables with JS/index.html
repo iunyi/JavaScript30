@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Update CSS Variables with JS</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Update CSS Variables with JS</h1>
+    </header>
+    <main class="main">
+      <form class="controls">
+        <!-- Spacing -->
+        <label for="spacing">Spacing</label>
+        <input
+          type="range"
+          name="spacing"
+          value="15"
+          min="0"
+          max="100"
+          data-sizing="px"
+        />
+        <!-- Blur -->
+        <label for="blur">Blur</label>
+        <input
+          type="range"
+          name="blur"
+          value="0"
+          min="0"
+          max="10"
+          data-sizing="px"
+        />
+        <!-- Frame color -->
+        <label for="color">Base color</label>
+        <input class="color" type="color" name="color" value="#fadaca" />
+      </form>
+      <img
+        class="img"
+        src="./images/borderless.jpg"
+        title="Forest of resonating lamps, Tokyo"
+        alt="Forest of resonating lamps, Tokyo"
+      />
+    </main>
+    <footer class="footer">
+      <a class="link" href="https://github.com/iunyi" target="_blank">
+        <i class="fab fa-github"></i>
+        <span class="highlight">IUNYI</span>
+      </a>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

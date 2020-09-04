@@ -1,0 +1,168 @@
+/* VARIABLES */
+/* MIXINS */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 10vh;
+  background-color: #ffffff;
+}
+
+.main {
+  height: 80vh;
+}
+
+.main .panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main .panels .panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.main .panels .panel > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #ffffff;
+  font-size: 2rem;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.main .panels .panel > *:first-child {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.main .panels .panel > *:last-child {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.main .panels .open {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.main .panels .open-active > *:first-child {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.main .panels .open-active > *:last-child {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.main .panels .panel1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/1.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/1.jpeg");
+  background-size: cover;
+  background-position: 35%;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main .panels .panel2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/2.jpg");
+  background-size: cover;
+  background-position: center 77%;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main .panels .panel3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/3.jpg");
+  background-size: cover;
+  background-position: 57%;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.main .panels .panel4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/4.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/4.jpeg");
+  background-size: cover;
+  background-position: 53%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.main .panels .panel5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../images/5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/5.jpg");
+  background-size: cover;
+  background-position: 40% 15%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 10vh;
+  padding: 30px;
+  font-size: 12px;
+}
+
+.footer .link {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.footer .link:hover {
+  color: #000000;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+/*# sourceMappingURL=main.css.map */

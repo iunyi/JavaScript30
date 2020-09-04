@@ -1,0 +1,149 @@
+/* VARIABLES */
+// Colors
+$color_dark: #000000;
+$color_light: #ffffff;
+
+/* MIXINS */
+// Flexbox
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+// ---------------------------------
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 10vh;
+  background-color: $color_light;
+}
+
+.main {
+  height: 80vh;
+
+  .panels {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+
+    .panel {
+      @include flex_center;
+      flex-direction: column;
+      flex: 1;
+      transition: all 1s ease-in-out;
+
+      & > * {
+        @include flex_center;
+        flex: 1;
+        color: $color_light;
+        font-size: 2rem;
+        transition: all 0.7s ease-in-out;
+
+        &:first-child {
+          transform: translateY(-100%);
+        }
+        &:last-child {
+          transform: translateY(100%);
+        }
+      }
+    }
+
+    .open {
+      flex: 5;
+      filter: brightness(100%);
+    }
+
+    .open-active {
+      & > *:first-child {
+        transform: translateY(0);
+      }
+      & > *:last-child {
+        transform: translateY(0);
+      }
+    }
+
+    .panel1 {
+      background: linear-gradient(
+          transparentize($color_dark, 0.8),
+          transparentize($color_dark, 0.8)
+        ),
+        url('../images/1.jpeg');
+      background-size: cover;
+      background-position: 35%;
+      filter: brightness(70%);
+    }
+    .panel2 {
+      background: linear-gradient(
+          transparentize($color_dark, 0.7),
+          transparentize($color_dark, 0.7)
+        ),
+        url('../images/2.jpg');
+      background-size: cover;
+      background-position: center 77%;
+
+      filter: brightness(70%);
+    }
+    .panel3 {
+      background: linear-gradient(
+          transparentize($color_dark, 0.9),
+          transparentize($color_dark, 0.9)
+        ),
+        url('../images/3.jpg');
+      background-size: cover;
+      background-position: 57%;
+      filter: brightness(70%);
+    }
+    .panel4 {
+      background: linear-gradient(
+          transparentize($color_dark, 0.8),
+          transparentize($color_dark, 0.8)
+        ),
+        url('../images/4.jpeg');
+      background-size: cover;
+      background-position: 53%;
+      filter: brightness(80%);
+    }
+    .panel5 {
+      background: linear-gradient(
+          transparentize($color_dark, 0.8),
+          transparentize($color_dark, 0.8)
+        ),
+        url('../images/5.jpg');
+      background-size: cover;
+      background-position: 40% 15%;
+      filter: brightness(80%);
+    }
+  }
+}
+
+.footer {
+  @include flex_end;
+  height: 10vh;
+  padding: 30px;
+  font-size: 12px;
+
+  .link {
+    color: transparentize($color_dark, 0.2);
+
+    &:hover {
+      color: $color_dark;
+      transition: 0.2s linear;
+    }
+  }
+}

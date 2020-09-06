@@ -1,0 +1,137 @@
+/* VARIABLES */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 100;
+}
+
+body {
+  background-image: url("../image/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.highlight {
+  font-weight: 500;
+  color: #f0592a;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+}
+
+.main .search-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.main .search-form .search {
+  width: 400px;
+  padding: 8px 16px;
+  border: none;
+  -webkit-box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 4px 4px 22px -5px rgba(0, 0, 0, 0.75);
+  background-color: #417482;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.main .search-form .search::-webkit-input-placeholder {
+  color: #95d1db;
+}
+
+.main .search-form .search:-ms-input-placeholder {
+  color: #95d1db;
+}
+
+.main .search-form .search::-ms-input-placeholder {
+  color: #95d1db;
+}
+
+.main .search-form .search::placeholder {
+  color: #95d1db;
+}
+
+.main .search-form .suggestions {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.main .search-form .suggestions::-webkit-scrollbar {
+  display: none;
+}
+
+.main .search-form .suggestions .suggestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  -webkit-box-shadow: 4px 4px 12px -5px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 12px -5px rgba(0, 0, 0, 0.5);
+  color: #417482;
+}
+
+.main .search-form .suggestions .suggestion:nth-child(even) {
+  -webkit-transform: perspective(60px) rotateX(3deg) translateY(2px) scale(1.001);
+          transform: perspective(60px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#efefef));
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+.main .search-form .suggestions .suggestion:nth-child(odd) {
+  -webkit-transform: perspective(60px) rotateX(-3deg) translateY(3px);
+          transform: perspective(60px) rotateX(-3deg) translateY(3px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#efefef));
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+
+.main .search-form .suggestions .suggestion .population {
+  color: #6ea5b1;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
+  padding: 30px;
+}
+
+.footer .link {
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+
+.footer .link:hover {
+  color: #000000;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+/*# sourceMappingURL=main.css.map */

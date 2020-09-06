@@ -1,0 +1,119 @@
+/* VARIABLES */
+// Colors
+$color_primary: #417482;
+$color_secondary: #6ea5b1;
+$color_tertiary: #95d1db;
+$color_highlight: #f0592a;
+$color_dark: #000000;
+$color_neutral: #efefef;
+$color_light: #ffffff;
+
+// ---------------------------------
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 100;
+}
+
+body {
+  background-image: url('../image/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.highlight {
+  font-weight: 500;
+  color: $color_highlight;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+
+  .search-form {
+    max-width: 400px;
+    margin: auto;
+
+    .search {
+      width: 400px;
+      padding: 8px 16px;
+      border: none;
+      box-shadow: 4px 4px 22px -5px transparentize($color_dark, 0.25);
+      background-color: $color_primary;
+      color: $color_light;
+      font-size: 20px;
+
+      &::placeholder {
+        color: $color_tertiary;
+      }
+    }
+
+    .suggestions {
+      height: 70vh;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .suggestion {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        box-shadow: 4px 4px 12px -5px transparentize($color_dark, 0.5);
+        color: $color_primary;
+
+        &:nth-child(even) {
+          transform: perspective(60px) rotateX(3deg) translateY(2px)
+            scale(1.001);
+          background: linear-gradient(
+            to bottom,
+            $color_light 0%,
+            $color_neutral 100%
+          );
+        }
+
+        &:nth-child(odd) {
+          transform: perspective(60px) rotateX(-3deg) translateY(3px);
+          background: linear-gradient(
+            to top,
+            $color_light 0%,
+            $color_neutral 100%
+          );
+        }
+
+        .population {
+          color: $color_secondary;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  padding: 30px;
+
+  .link {
+    color: transparentize($color_dark, 0.2);
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color_dark;
+      transition: 0.2s linear;
+    }
+  }
+}
